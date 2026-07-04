@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth scroll-pt-28">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flamenco Compás Master | asariko</title>
+  <meta name="description" content="Flamenco Compás Master is a calm, privacy-first cycle tracking app designed for clarity, comfort, and simplicity." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          },
+          colors: {
+            slate: {
+              850: '#1f2937',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom CSS -->
+    <link rel="stylesheet" href="/style.css">
+
+  <style>
+    h1.text-slate-900,
+    h2.text-slate-900 {
+      color: #2c3e50 !important;
+    }
+
+    header a.text-slate-900 {
+      color: #2c3e50 !important;
+    }
+  </style>
+</head>
+
+<body class="bg-white text-slate-900 selection:bg-slate-200 selection:text-slate-900 font-sans">
+
+  <!-- Navbar -->
+    <header id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-transparent transition-all duration-300 py-6">
+        <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 flex items-center justify-between">
+            <a href="https://asariko.net" class="text-xl font-bold tracking-tight text-slate-900 z-50 relative">asariko</a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex items-center gap-8">
+                <a href="https://asariko.net" class="text-sm font-medium text-slate-500 hover:text-slate-900 transition-colors">Home</a>
+                <a href="https://asariko.net/projects" class="text-sm font-medium text-slate-500 hover:text-slate-900 transition-colors">Projects</a>
+                <a href="https://asariko.net/#about" class="text-sm font-medium text-slate-500 hover:text-slate-900 transition-colors">About</a>
+                <a href="https://asariko.net/#contact" class="text-sm font-medium text-slate-500 hover:text-slate-900 transition-colors">Contact</a>
+            </nav>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-slate-900 p-2 z-50 relative" aria-label="Toggle menu">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Nav Overlay -->
+        <div id="mobile-menu" class="fixed top-0 left-0 w-screen h-screen bg-white/70 backdrop-blur-sm z-40 flex flex-col items-center justify-center gap-8 hidden opacity-0 transition-opacity duration-300">
+            <a href="https://asariko.net" class="mobile-link text-2xl font-medium text-slate-900">Home</a>
+            <a href="https://asariko.net/projects" class="mobile-link text-2xl font-medium text-slate-900">Projects</a>
+            <a href="https://asariko.net/#about" class="mobile-link text-2xl font-medium text-slate-900">About</a>
+            <a href="https://asariko.net/#contact" class="mobile-link text-2xl font-medium text-slate-900">Contact</a>
+        </div>
+    </header>
+
+  <main class="pt-28 flex-grow w-full max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 flex flex-col gap-24 md:gap-32 pb-24">
+
+    <section class="scroll-mt-24">
+      <article class="flex flex-col gap-12">
+
+        <div class="max-w-3xl">
+          <h1 class="text-4xl md:text-5xl font-bold text-slate-900 mb-4">Flamenco Compás Master</h1>
+          <p class="text-xl text-slate-400 font-light mb-6">
+            Flamenco Compás Master is a refined flamenco rhythm companion that replaces sterile metronome clicks with the living, breathing pulse of real palmas and cajón.
+          </p>
+          <p class="text-slate-600 leading-relaxed text-lg mb-8">
+            Rhythm in flamenco is more than counting beats, it’s about feeling the compás. Flamenco Compás Master is built for dancers, guitarists, and singers who want a practice tool that feels alive. Instead of relying on the robotic, synthetic clicks of a traditional metronome, it uses real palmas and cajón recordings to create a natural, musical groove. It is designed as a beautifully minimal, distraction free space that helps artists truly internalize the heartbeat of flamenco and focus purely on their craft.
+          </p>
+
+          <div class="flex flex-wrap items-center gap-4">
+            <a
+              href="/terms"
+              class="inline-flex items-center gap-2 bg-[#2c3e50] text-white px-6 py-3.5 rounded-lg text-sm font-medium transition-transform hover:-translate-y-0.5 hover:shadow-lg hover:shadow-slate-900/20">
+              Terms
+              <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+            </a>
+
+            <a
+              href="/privacy"
+              class="inline-flex items-center gap-2 border border-slate-200 text-slate-700 px-6 py-3.5 rounded-lg text-sm font-medium hover:bg-slate-50 hover:border-slate-300 transition-all">
+              Privacy
+              <i data-lucide="shield" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Image Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="aspect-[3/4] rounded-lg overflow-hidden bg-slate-50 transition-transform duration-300 hover:-translate-y-1 hover:scale-[1.04] hover:shadow-md">
+            <img src="https://asariko.net/assets/compass_master/cm1.webp" class="w-full h-full object-contain bg-slate-50 transition-transform duration-500" alt="Flamenco Compás Master screen 1">
+          </div>
+
+          <div class="aspect-[3/4] rounded-lg overflow-hidden bg-slate-50 transition-transform duration-300 hover:-translate-y-1 hover:scale-[1.04] hover:shadow-md">
+            <img src="https://asariko.net/assets/compass_master/cm2.webp" class="w-full h-full object-contain bg-slate-50 transition-transform duration-500" alt="Flamenco Compás Master screen 2">
+          </div>
+        </div>
+
+      </article>
+    </section>
+
+  </main>
+
+  <footer class="py-8 text-slate-400 text-sm border-t border-slate-100 mt-12">
+    <div class="flex flex-col items-center gap-4 text-center sm:flex-row sm:justify-between sm:items-center sm:text-left max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+      <span>&copy; <span id="year"></span> asariko</span>
+
+      <div class="flex flex-col items-center gap-2 sm:flex-row sm:gap-4 sm:justify-end">
+        <span>Built with simplicity</span>
+
+        <div class="flex items-center gap-2">
+          <a href="/terms" class="hover:text-slate-900 transition-colors">Terms</a>
+          <span class="text-slate-300">·</span>
+          <a href="/privacy" class="hover:text-slate-900 transition-colors">Privacy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    
+  </script>
+  <script src="/script.js"></script>
+<script>
+  lucide.createIcons();
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
