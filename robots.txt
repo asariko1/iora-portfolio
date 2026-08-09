@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://iora.asariko.net/sitemap.xml
