@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth scroll-pt-28">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Track Your Subscriptions — Iora | asariko</title>
+  <meta name="description" content="Track your subscriptions, get reminded before renewals, and see what you're really spending. Iora is a calm, privacy-first subscription tracker. Free on iOS and Android." />
+
+  <!-- Canonical: must match the live address exactly -->
+  <link rel="canonical" href="https://iora.asariko.net/">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="theme-color" content="#2c3e50">
+
+  <!-- Open Graph (Google, LinkedIn, WhatsApp, Slack, Facebook) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="asariko">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:url" content="https://iora.asariko.net/">
+  <meta property="og:title" content="Track Your Subscriptions — Iora">
+  <meta property="og:description" content="Track your subscriptions, get reminded before renewals, and see what you're really spending. Calm, privacy-first, free on iOS and Android.">
+  <meta property="og:image" content="https://iora.asariko.net/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="asariko — Minimal Digital Products">
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Track Your Subscriptions — Iora">
+  <meta name="twitter:description" content="Track your subscriptions, get reminded before renewals, and see what you're really spending. Free on iOS and Android.">
+  <meta name="twitter:image" content="https://iora.asariko.net/assets/og-image.png">
+
+  <!-- Structured data: this is a mobile app, with links to both store listings -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MobileApplication",
+    "name": "Iora",
+    "url": "https://iora.asariko.net/",
+    "description": "A calm, privacy-first subscription tracker. Track subscriptions, get reminders before renewals, and see monthly and yearly spending.",
+    "applicationCategory": "FinanceApplication",
+    "operatingSystem": "iOS, Android",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "downloadUrl": [
+      "https://apps.apple.com/app/id6787712991",
+      "https://play.google.com/store/apps/details?id=net.asariko.iora"
+    ],
+    "author": {
+      "@type": "Organization",
+      "name": "asariko",
+      "url": "https://asariko.net"
+    }
+  }
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          },
+          colors: {
+            slate: {
+              850: '#1f2937',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom CSS -->
+    <link rel="stylesheet" href="/style.css">
+
+  <style>
+    h1.text-slate-900,
+    h2.text-slate-900 {
+      color: #2c3e50 !important;
+    }
+
+    header a.text-slate-900 {
+      color: #2c3e50 !important;
+    }
+  </style>
+</head>
+
+<body class="bg-white text-slate-900 selection:bg-slate-200 selection:text-slate-900 font-sans">
+
+  <!-- Navbar -->
+    <header id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-transparent transition-all duration-300 py-6">
+        <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 flex items-center justify-between">
+            <!-- <a href="https://asariko.net" class="text-xl font-bold tracking-tight text-slate-900 z-50 relative">asariko</a>-->
+            <a href="https://asariko.net" class="z-50 relative">
+                <img 
+                    src="/assets/logo.png" 
+                    alt="asariko logo"
+                    class="h-10 md:h-12 w-auto"
+                >
+            </a> 
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex items-center gap-8">
+                <a href="https://asariko.net" class="text-sm font-medium text-slate-500 hover:text-slate-900 transition-colors">Home</a>
+                <a href="https://asariko.net/projects" class="text-sm font-medium text-slate-500 hover:text-slate-900 transition-colors">Projects</a>
+                <a href="https://asariko.net/#about" class="text-sm font-medium text-slate-500 hover:text-slate-900 transition-colors">About</a>
+                <a href="https://asariko.net/#contact" class="text-sm font-medium text-slate-500 hover:text-slate-900 transition-colors">Contact</a>
+            </nav>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-slate-900 p-2 z-50 relative" aria-label="Toggle menu">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Nav Overlay -->
+        <div id="mobile-menu" class="fixed top-0 left-0 w-screen h-screen bg-white/70 backdrop-blur-sm z-40 flex flex-col items-center justify-center gap-8 hidden opacity-0 transition-opacity duration-300">
+            <a href="https://asariko.net" class="mobile-link text-2xl font-medium text-slate-900">Home</a>
+            <a href="https://asariko.net/projects" class="mobile-link text-2xl font-medium text-slate-900">Projects</a>
+            <a href="https://asariko.net/#about" class="mobile-link text-2xl font-medium text-slate-900">About</a>
+            <a href="https://asariko.net/#contact" class="mobile-link text-2xl font-medium text-slate-900">Contact</a>
+        </div>
+    </header>
+
+  <main class="pt-28 flex-grow w-full max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 flex flex-col gap-24 md:gap-32 pb-24">
+
+    <section class="scroll-mt-24">
+      <article class="flex flex-col gap-12">
+
+        <div class="max-w-3xl">
+          <h1 class="text-4xl md:text-5xl font-bold text-slate-900 mb-4">iora</h1>
+          <p class="text-xl text-slate-400 font-light mb-6">
+            Subscriptions, organized without effort.
+          </p>
+          <p class="text-slate-600 leading-relaxed text-lg mb-8">
+            Keep track of all your subscriptions in one place. Add them manually, get reminders before renewal, see monthly and yearly spending, and check what's coming up on a simple calendar. Minimal, clear, and calm.
+          </p>
+
+          <div class="flex flex-wrap items-center gap-4">
+            <a
+              href="/terms"
+              class="inline-flex items-center gap-2 bg-[#2c3e50] text-white px-6 py-3.5 rounded-lg text-sm font-medium transition-transform hover:-translate-y-0.5 hover:shadow-lg hover:shadow-slate-900/20">
+              Terms
+              <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+            </a>
+
+            <a
+              href="/privacy"
+              class="inline-flex items-center gap-2 border border-slate-200 text-slate-700 px-6 py-3.5 rounded-lg text-sm font-medium hover:bg-slate-50 hover:border-slate-300 transition-all">
+              Privacy
+              <i data-lucide="shield" class="w-3.5 h-3.5"></i>
+            </a>
+            <!-- Store badges. Official artwork — do not recolour, stretch or resize
+                  one without the other; both stores require their badge to be no
+                  smaller than the other's, so keep the h-12 on both. -->
+            <a
+                href="https://apps.apple.com/app/id6787712991"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Download Iora on the App Store"
+                class="inline-block transition-transform hover:-translate-y-0.5">
+                <img src="/assets/badges/apple-store-black.svg" alt="Download on the App Store" class="h-12 w-auto">
+            </a>
+
+            <a
+                href="https://play.google.com/store/apps/details?id=net.asariko.iora"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Get Iora on Google Play"
+                class="inline-block transition-transform hover:-translate-y-0.5">
+                <img src="/assets/badges/google-play.svg" alt="Get it on Google Play" class="h-12 w-auto">
+            </a>
+          </div>          
+        </div>
+        
+            
+
+
+
+        <!-- Image Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="aspect-[3/4] rounded-lg overflow-hidden bg-slate-50 transition-transform duration-300 hover:-translate-y-1 hover:scale-[1.04] hover:shadow-md">
+            <img src="https://asariko.net/assets/iora/i1.webp" class="w-full h-full object-contain bg-slate-50 transition-transform duration-500" alt="iora screen 1">
+          </div>
+
+          <div class="aspect-[3/4] rounded-lg overflow-hidden bg-slate-50 transition-transform duration-300 hover:-translate-y-1 hover:scale-[1.04] hover:shadow-md">
+            <img src="https://asariko.net/assets/iora/i2.webp" class="w-full h-full object-contain bg-slate-50 transition-transform duration-500" alt="iora screen 2">
+          </div>
+        </div>
+
+      </article>
+    </section>
+
+  </main>
+
+  <footer class="py-8 text-slate-400 text-sm border-t border-slate-100 mt-12">
+    <div class="flex flex-col items-center gap-4 text-center sm:flex-row sm:justify-between sm:items-center sm:text-left max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+      <span>&copy; <span id="year"></span> asariko</span>
+
+      <div class="flex flex-col items-center gap-2 sm:flex-row sm:gap-4 sm:justify-end">
+        <span>Built with simplicity</span>
+
+        <div class="flex items-center gap-2">
+          <a href="/terms" class="hover:text-slate-900 transition-colors">Terms</a>
+          <span class="text-slate-300">·</span>
+          <a href="/privacy" class="hover:text-slate-900 transition-colors">Privacy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    
+  </script>
+  <script src="/script.js"></script>
+<script>
+  lucide.createIcons();
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
